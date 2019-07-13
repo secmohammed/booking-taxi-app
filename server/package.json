@@ -1,0 +1,68 @@
+{
+   "name": "graphql-typescript-server",
+   "version": "0.0.1",
+   "description": "Awesome project developed with TypeORM.",
+   "devDependencies": {
+      "@gql2ts/from-schema": "^1.10.1",
+      "@types/bcryptjs": "^2.4.2",
+      "@types/connect-redis": "^0.0.10",
+      "@types/dotenv": "^6.1.1",
+      "@types/express-session": "^1.15.13",
+      "@types/ioredis": "^4.0.12",
+      "@types/jest": "^24.0.15",
+      "@types/jsonwebtoken": "^8.3.2",
+      "@types/node": "^8.0.29",
+      "@types/node-fetch": "^2.3.7",
+      "@types/request-promise-native": "^1.0.16",
+      "@types/uuid": "^3.4.5",
+      "@types/yup": "^0.26.20",
+      "axios": "^0.19.0",
+      "dotenv": "^8.0.0",
+      "gql2ts": "^1.10.1",
+      "jest": "^24.8.0",
+      "nodemon": "^1.19.1",
+      "request-promise-native": "^1.0.7",
+      "sqlite3": "^4.0.9",
+      "ts-jest": "^24.0.2",
+      "ts-node": "3.3.0",
+      "tslint": "^5.18.0",
+      "tslint-config-prettier": "^1.18.0",
+      "typescript": "3.3.3333"
+   },
+   "dependencies": {
+      "apollo-server": "^2.6.8",
+      "bcryptjs": "^2.4.3",
+      "graphql-import": "^0.7.1",
+      "graphql-yoga": "^1.18.0",
+      "ioredis": "^4.11.1",
+      "jsonwebtoken": "^8.5.1",
+      "mongodb": "^3.0.8",
+      "node-fetch": "^2.6.0",
+      "reflect-metadata": "^0.1.10",
+      "typeorm": "0.2.18",
+      "uuid": "^3.3.2",
+      "yarn": "^1.16.0",
+      "yup": "^0.27.0"
+   },
+   "scripts": {
+      "serve": "nodemon --exec ts-node src/index.ts",
+      "test": "NODE_ENV=test  jest  --detectOpenHandles --forceExit",
+      "gen-schema-types": "ts-node  src/scripts/createTypes.ts"
+   },
+   "jest": {
+      "globalSetup": "./src/utils/tests/callSetup.js",
+      "transform": {
+         "^.+\\.tsx?$": "ts-jest"
+      },
+      "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+      "moduleFileExtensions": [
+         "ts",
+         "tsx",
+         "js",
+         "jsx",
+         "json",
+         "node"
+      ]
+   },
+   "license": "MIT"
+}

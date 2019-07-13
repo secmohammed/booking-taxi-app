@@ -1,0 +1,9 @@
+type Error {
+    path: String!
+    message: String!
+}
+
+type Status {
+    message: String!
+    path: String
+}
