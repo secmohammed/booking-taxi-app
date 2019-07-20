@@ -1,10 +1,20 @@
 {
-  "compilerOptions": {
-    "noEmit": true,
-    "lib": ["dom", "esnext"],
-    "jsx": "react-native",
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "skipLibCheck": true
-  }
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "jsx": "react-native",
+        "lib": ["es6", "esnext.asynciterable"],
+        "strict": true,
+        "esModuleInterop": true,
+        "rootDir": "src",
+        "forceConsistentCasingInFileNames": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "noUnusedLocals": true,
+        "skipLibCheck": true,
+        "baseUrl": "."
+    }
 }

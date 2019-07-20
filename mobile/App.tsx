@@ -1,19 +1,17 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-
+import React from "react";
+import { Provider, connect } from "react-redux";
+import { store, persistor } from "./src/store/index";
+import { PersistGate } from "redux-persist/integration/react";
+import Loading from "./src/components/Loading";
+import { Router } from "react-native-router-flux";
+import { scenes } from "./src/routes/scenes";
+const RouterWithRedux = connect()(Router);
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-    </View>
+    <Provider store={store}>
+      <PersistGate loading={<Loading />} persistor={persistor}>
+        <RouterWithRedux scenes={scenes}></RouterWithRedux>
+      </PersistGate>
+    </Provider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
