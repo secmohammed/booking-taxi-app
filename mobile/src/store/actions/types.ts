@@ -12,3 +12,6 @@ export interface SetLoggedInUser {
     type: typeof SET_LOGGED_IN_USER;
     payload: User;
 }
+export interface AuthAction {
+    type: string;
+}

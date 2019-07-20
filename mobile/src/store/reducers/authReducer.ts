@@ -1,13 +1,16 @@
 import {
     SET_LOGGED_IN_USER,
     UNSET_LOGGED_IN_USER,
-    AuthenticationState
+    AuthenticationState,
+    AuthAction
 } from "../actions/types";
 const initialState: AuthenticationState = {
     isAuthenticated: null
 };
-
-export default function(state = initialState, action): AuthenticationState {
+export default function(
+    state = initialState,
+    action: AuthAction
+): AuthenticationState {
     switch (action.type) {
         case SET_LOGGED_IN_USER:
             return {
