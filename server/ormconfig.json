@@ -1,6 +1,6 @@
 [
    {
-      "name": "development",
+      "name": "default",
       "type": "mongodb",
       "database": "graphql_ts_server",
       "synchronize": true,
