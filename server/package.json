@@ -30,7 +30,7 @@
       "typescript": "3.3.3333"
    },
    "dependencies": {
-      "apollo-server": "^2.6.8",
+      "apollo-server": "^2.14.2",
       "bcryptjs": "^2.4.3",
       "graphql-import": "^0.7.1",
       "graphql-yoga": "^1.18.0",
